@@ -1,5 +1,6 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
+import * as Icons from "react-native-heroicons/solid";
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { signOut } from 'firebase/auth'
 import { auth } from '../config/firebase'

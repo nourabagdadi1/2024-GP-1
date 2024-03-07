@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Image, TextInput, Alert } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import {ArrowLeftIcon} from 'react-native-heroicons/solid'
+import * as Icons from "react-native-heroicons/solid";
 import { themeColors } from '../theme'
 import { useNavigation } from '@react-navigation/native'
 import { signInWithEmailAndPassword } from 'firebase/auth'
@@ -29,11 +29,12 @@ export default function LoginScreen() {
     <View className="flex-1 bg-white" style={{backgroundColor: themeColors.bg}}>
       <SafeAreaView  className="flex ">
         <View className="flex-row justify-end">
-          <TouchableOpacity onPress={()=> navigation.goBack()} 
-          className="bg-black p-2 rounded-tr-2xl rounded-bl-2xl ml-4">
-           <Image source={require('../assets/images/logo.png')} //back icon in here
-          style={{width: 100, height: 50}} />
-          </TouchableOpacity>
+        <TouchableOpacity 
+                onPress={()=> navigation.goBack()}
+                className="bg-[#82C8FF] p-2 rounded-tr-2xl rounded-bl-2xl ml-4"
+            >
+                <Icons.ArrowRightIcon size="20" color="white" />
+            </TouchableOpacity>
         </View>
         <View  className="flex-row justify-center">
           <Image source={require('../assets/images/logo.png')} 

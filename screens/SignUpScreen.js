@@ -2,12 +2,12 @@ import { View, Text, TouchableOpacity, Image, TextInput, Alert } from 'react-nat
 import React, { useState } from 'react'
 import { themeColors } from '../theme'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import {ArrowLeftIcon} from 'react-native-heroicons/solid';
+import * as Icons from "react-native-heroicons/solid";
 import { useNavigation } from '@react-navigation/native';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../config/firebase';
 
-// subscribe for more videos like this :)
+
 export default function SignUpScreen() {
     const navigation = useNavigation();
     const [username, setUsername] = useState('');
@@ -31,11 +31,12 @@ export default function SignUpScreen() {
     <View className="flex-1 bg-white " style={{backgroundColor: themeColors.bg}}>
       <SafeAreaView className="flex ">
         <View className="flex-row justify-end">
-        <TouchableOpacity onPress={()=> navigation.goBack()} 
-          className="bg-black p-2 rounded-tr-2xl rounded-bl-2xl ml-4">
-           <Image source={require('../assets/images/logo.png')} //back icon in here
-          style={{width: 100, height: 50}} />
-          </TouchableOpacity>
+        <TouchableOpacity 
+                onPress={()=> navigation.goBack()}
+                className="bg-yellow-400 p-2 rounded-tr-2xl rounded-bl-2xl ml-4"// اعجبني الاصفر شرايكم نخليه ولا نشيله؟
+            >
+                <Icons.ArrowRightIcon size="20" color="white" />
+            </TouchableOpacity>
         </View>
         <View className="flex-row justify-center">
             <Image source={require('../assets/images/logo.png')} 
