@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image, TextInput, Alert } from 'react-native'
+import { View, Text, TouchableOpacity, Image, TextInput, Alert, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import * as Icons from "react-native-heroicons/solid";
@@ -91,6 +91,5 @@ export default function LoginScreen() {
           
       </View>
     </View>
-    
   )
 }
