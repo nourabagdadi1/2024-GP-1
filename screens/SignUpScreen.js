@@ -33,7 +33,7 @@ export default function SignUpScreen() {
             }
         }
     }
-     // validation d
+     // validation 
  /* const handleSubmit = async () => {
     if (email && password && firstName && lastName && phoneNumber && birthdate && country && city) {
         if (phoneNumber.length === 10 && phoneNumber.startsWith('05')) {

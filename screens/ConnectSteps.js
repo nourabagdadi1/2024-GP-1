@@ -6,23 +6,13 @@ import { themeColors } from '../theme'
 import { useNavigation } from '@react-navigation/native'
 import { auth } from '../config/firebase'
 
-// add username and error header spacing css
-export default function ConnectScreen() {
+
+export default function ConnectSteps() {
     const navigation = useNavigation();
     return (
       <View className="flex-1 bg-white" style={{backgroundColor: themeColors.bg}}>
-      <SafeAreaView  className="flex-row justify-center items-center px-4 py-2 space-x-24">
-      <View className="flex-row justify-start">
-        <TouchableOpacity 
-            >
-                <Icons.BellIcon size="20" color="white" />
-            </TouchableOpacity>
-        </View>
-        <View  className="flex-row justify-center">
-          <Image source={require('../assets/images/logoimg.png')} 
-          style={{width: 50, height: 50}} />
-        </View>
-        <View className="flex-row justify-end">
+      <SafeAreaView  className="flex">
+      <View className="flex-row justify-end">
         <TouchableOpacity 
                 onPress={()=> navigation.goBack()}
                 className="bg-[#82C8FF] p-2 rounded-tr-2xl rounded-bl-2xl ml-4"
@@ -30,16 +20,25 @@ export default function ConnectScreen() {
                 <Icons.ArrowRightIcon size="20" color="white" />
             </TouchableOpacity>
         </View>
+        <View  className="flex-row justify-center">
+          <Image source={require('../assets/images/logoimg.png')} 
+          style={{width: 50, height: 50}} />
+        </View>
+        
     
       </SafeAreaView>
       
       <View 
         
-        className="flex-1 bg-white px-8 pt-8 justify-center">
-          <View className="form space-y-2">
-          <View className='items-center '>
-          <Text className="text-xl font-bold mb-6 text-center">مرحبا!</Text> 
-          <Text className="text-base mb-6 text-center"> قم بربط الجهاز للوصول لجميع خدمات مرشد والبدء بادارة بيتك</Text>
+        className="flex-1  px-8 pt-8 ">
+          <View className="form space-y-10">
+          <View className='items-end flex-col space-y-4 '>
+          <Text className="text-xl font-bold mb-6 text-end text-white">واحد</Text> 
+          <Text className="text-xl font-bold mb-6 text-end text-white">واحد</Text> 
+          <Text className="text-xl font-bold mb-6 text-end text-white">واحد</Text> 
+          <Text className="text-xl font-bold mb-6 text-end text-white">واحد</Text> 
+          <Text className="text-xl font-bold mb-6 text-end text-white">واحد</Text> 
+          <Text className="text-xl font-bold mb-6 text-end text-white">واحد</Text> 
             </View>
         
             <TouchableOpacity 
@@ -63,5 +62,11 @@ export default function ConnectScreen() {
   
             
   };
-
+  
+  
+  
+  
+  
+  
+  
   
